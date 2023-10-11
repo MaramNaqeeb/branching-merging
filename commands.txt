@@ -1,0 +1,42 @@
+$ git status
+On branch feature/uppercase
+nothing to commit, working tree clean
+
+$ git branch
+* feature/uppercase
+  main
+
+$ git log --oneline --graph --all
+* b862d93 (HEAD -> feature/uppercase) HELLO
+* 61ca961 (origin/main, main) hello
+
+
+$ cat greeting.txt
+hello
+
+
+$  git diff main..feature/uppercase
+diff --git a/greeting.txt b/greeting.txt
+index b6fc4c6..d9605cb 100644
+--- a/greeting.txt
++++ b/greeting.txt
+@@ -1 +1 @@
+-hello
+\ No newline at end of file
++HELLO
+\ No newline at end of file
+
+
+$ git merge feature/uppercase
+Updating 61ca961..b862d93
+Fast-forward
+ greeting.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+$ cat greeting.txt
+HELLO
+
+
+$ git branch -d feature/uppercase
+Deleted branch feature/uppercase (was b862d93).
