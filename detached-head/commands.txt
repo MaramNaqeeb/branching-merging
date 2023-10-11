@@ -1,0 +1,56 @@
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+
+git add file1.txt
+git commit -am "A"
+
+
+git add file2.txt
+git commit -am "B"
+
+
+git add file3.txt
+git commit -am "C"
+
+
+git add file4.txt
+git commit -am "D"
+
+
+$ git checkout HEAD
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+
+$ git branch the-beginning
+
+
+$  git log --oneline --graph --all
+* 49a3de6 (HEAD -> main) D
+* fdc76cd C
+* 06ecedc B
+* 8bc0ba5 A
+
+
+$ git checkout fdc76cd
+
+$ git status
+HEAD detached at fdc76cd
+nothing to commit, working tree clean
+
+
+$ git checkout the-beginning
+$ git add file1.txt
+$ git commit -m "A"
+
+
+$  git log --oneline --graph --all
+* 7ef4d42 (HEAD -> the-beginning) A
+* 49a3de6 (main) D
+* fdc76cd C
+* 06ecedc B
+* 8bc0ba5 A
