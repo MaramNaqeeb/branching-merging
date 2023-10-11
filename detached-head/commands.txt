@@ -30,7 +30,7 @@ $ git branch the-beginning
 
 
 $  git log --oneline --graph --all
-* 49a3de6 (HEAD -> main) D
+* 49a3de6 (HEAD -> main, the-beginning) D
 * fdc76cd C
 * 06ecedc B
 * 8bc0ba5 A
